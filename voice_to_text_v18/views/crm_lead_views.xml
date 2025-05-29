@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 GUMBYS -->
+<!-- License LGPL-3 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<!-- @author adham mohamed <adham.mohamed@gumbys.be> -->
+<odoo>
+    <record id="view_crm_voice_text_form" model="ir.ui.view">
+        <field name="name">crm.voice.text.form</field>
+        <field name="model">crm.voice.text</field>
+        <field name="arch" type="xml">
+            <form string="Voice to Text">
+                <group>
+                    <field name="title"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit.event.crm</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <field name='tag_ids' position="after">
+                <group string="Activity Counts" colspan="4">
+                    <field name="activity_count_email" widget="statinfo"/>
+                    <field name="activity_count_call" widget="statinfo"/>
+                    <field name="activity_count_meeting" widget="statinfo"/>
+                    <field name="activity_count_todo" widget="statinfo"/>
+                    <field name="done_calls_count" widget="statinfo"/>
+                    <field name="done_teams_calls_count" widget="statinfo"/>
+                    <field name="done_physical_visits_count" widget="statinfo"/>
+                    <field name="done_emails_count" widget="statinfo"/>
+                </group>
+            </field>
+            <xpath expr="//header" position="inside">
+                <button name="action_log_voice_note" type="object" string="Log Note"
+                        class="oe_highlight"/>
+            </xpath>
+            <field name="tag_ids" position="after">
+                <field name="voice_to_text"/>
+                <field name="voice_to_text_id" string="prompt"/>
+            </field>
+            <page name="lead" position="after">
+                <page string="Activities" name="activities">
+                    <field name="activity_ids">
+                        <list editable="bottom">
+                            <field name="activity_type_id"/>
+                            <field name="date_deadline"/>
+                            <field name="voice_to_text" style="width: 537px;"/>
+                            <field name="voice_to_text_id" string="prompt"/>
+                            <field name="state"/>
+                            <field name="is_done"/>
+                            <button name="action_log_voice_note" type="object" string="Log Note"
+                                    class="oe_highlight"/>
+                            <field name="note"/>
+                        </list>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

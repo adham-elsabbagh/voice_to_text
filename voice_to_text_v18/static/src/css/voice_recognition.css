@@ -1,0 +1,42 @@
+/* Recording Button */
+#record_voice {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 40%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid transparent; /* Default border */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Active Recording State with Pulsing Animation */
+#record_voice.recording {
+  background-color: red;
+  color: white;
+  border-color: red;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+/* Increase the width of the voice_to_text field in list views */
+.o_list_view .custom_voice_to_text_width {
+    min-width: 300px; /* Set this to your desired width */
+    max-width: 300px; /* Optional, for consistent rendering */
+}
