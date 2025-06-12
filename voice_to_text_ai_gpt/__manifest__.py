@@ -32,9 +32,8 @@
         • Modern browser with microphone access
         • Internet connection for AI processing
     ''',
-    'author': 'Adham Mohamed',
-    'website': 'https://github.com/adham-elsabbagh/voice_to_text_ai_gpt',
-    'maintainer': 'Adham Mohamed',
+    'author': 'Adham',
+    'maintainer': 'Adham',
     'depends': ['base', 'web', 'crm', 'mail'],
     'data': [
         'security/ir.model.access.csv',
