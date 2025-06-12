@@ -1,5 +1,4 @@
-# Copyright 2023-2024 GUMBYS
-# @author adham mohamed <adham.mohamed@gumbys.be>
+
 # License 'LGPL-3' or later.
 
 from datetime import datetime

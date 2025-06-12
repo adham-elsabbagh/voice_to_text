@@ -1,15 +1,11 @@
-# Copyright 2023-2024 GUMBYS
-# @author adham mohamed <adham.mohamed@gumbys.be>
-# License 'LGPL-3' or later.{
-
 {
     'name': 'Voice To Text',
     'version': '18.0.3.0.0',
     'category': 'Extra Tools',
     'summary': 'Record voice in odoo.',
+    'license': 'LGPL-3',
     'description': 'Record voice and convert the voice into text.',
-    'author': 'Adham Mohamed',
-    'company': 'gumbys',
+    'author': 'Adham',
     'depends': ['base', 'web', 'crm', 'mail'],
     'data': [
         'security/ir.model.access.csv',
@@ -25,4 +21,6 @@
     'external_dependencies': {
         'python': ['openai', 'openai-whisper']
     },
+    'price': 10,
+    'currency': 'EUR',
 }
