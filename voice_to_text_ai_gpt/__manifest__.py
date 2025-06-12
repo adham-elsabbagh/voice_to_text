@@ -42,15 +42,15 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'voice_to_text/static/src/xml/text_field.xml',
-            'voice_to_text/static/src/js/text_field.js',
-            'voice_to_text/static/src/css/voice_recognition.css',
+            'voice_to_text_ai_gpt/static/src/xml/text_field.xml',
+            'voice_to_text_ai_gpt/static/src/js/text_field.js',
+            'voice_to_text_ai_gpt/static/src/css/voice_recognition.css',
         ],
     },
     'external_dependencies': {
         'python': ['openai', 'openai-whisper']
     },
-    'icon': 'voice_to_text/static/description/icon.png',
+    'icon': 'voice_to_text_ai_gpt/static/description/icon.png',
     'images': [
         'static/description/banner.png',
     ],
