@@ -21,6 +21,8 @@
     'external_dependencies': {
         'python': ['openai', 'openai-whisper']
     },
-    'price': 10,
+    "icon": "/voice_to_text/static/description/icon.png",
+    'images': ['static/description/banner.png'],
+    'price': 9.99,
     'currency': 'EUR',
 }
